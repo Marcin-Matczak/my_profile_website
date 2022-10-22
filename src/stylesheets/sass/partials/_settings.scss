@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap');
+
+/* Variables */
+
+$color-light-background: #edebfa;
+$color-light-main: #b9B0D6;
+$color-light-primary: #dceaf9;
+$color-light-secondary: #f5cfe9;
+$color-light-text: #809bc4;
+
+$color-dark-background: #121716;
+$color-dark-main: #171c2d;
+$color-dark-primary: #273248;
+$color-dark-secondary: #6d6875;
+$color_dark-text: #ffcdb2;
+
+$font-header: 'Montserrat', sans-serif;
+$font-text: 'Merriweather', serif;
+
+$base-size: 12px;
+
+$radius: 4px;
+
+/* Mixins */
+
+@mixin flex($flex-direction, $align-items, $justify-content) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
