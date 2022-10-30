@@ -2,30 +2,44 @@
 
 /* Variables */
 
-$color-light-background: #edebfa;
-$color-light-main: #b9B0D6;
-$color-light-primary: #dceaf9;
-$color-light-secondary: #f5cfe9;
-$color-light-text: #809bc4;
+$bg-light: #eeeae3;
+$home-light: #f9f6f2;
+$primary-light: #ddd6ce;
+$secondary-light: #e7d27c;
+$text-light: #121716;
 
-$color-dark-background: #121716;
-$color-dark-main: #171c2d;
-$color-dark-primary: #273248;
-$color-dark-secondary: #6d6875;
-$color_dark-text: #ffcdb2;
+$bg-dark: #121716;
+$home-dark: #171c2d;
+$primary-dark: #273248;
+$secondary-dark: #6d6875;
+$text-dark: #d4c2f0;
 
 $font-header: 'Montserrat', sans-serif;
 $font-text: 'Merriweather', serif;
 
 $base-size: 12px;
 
-$radius: 4px;
+$radius: 8px;
 
 /* Mixins */
 
+@mixin center() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
 @mixin flex($flex-direction, $align-items, $justify-content) {
-    display: flex;
-    flex-direction: $flex-direction;
-    align-items: $align-items;
-    justify-content: $justify-content;
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin grid-layout($col-value, $row-value, $px, $gap){
+  display: grid;
+  grid-template-columns: repeat($col-value, $px);
+  grid-template-rows: repeat($row-value, $px);
+  gap: $gap;
 }
