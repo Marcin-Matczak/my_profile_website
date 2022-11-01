@@ -7,4 +7,10 @@ body {
   background-color: $bg-light;
   box-shadow: 10px 10px 17px -5px $text-light;
   margin: 0;
+  font-family: $font-text;
+}
+
+h1 {
+  font-family: $font-header;
+  text-transform: uppercase;
 }

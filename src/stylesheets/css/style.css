@@ -14,6 +14,12 @@ body {
   background-color: #eeeae3;
   box-shadow: 10px 10px 17px -5px #121716;
   margin: 0;
+  font-family: "Merriweather", serif;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
 }
 
 .home {
@@ -33,12 +39,10 @@ body {
 }
 .home .box a {
   display: flex;
-  width: 100%;
   height: 100%;
 }
 .home .box img {
   object-fit: contain;
-  width: 100%;
   padding: 12px;
 }
 .home .box img:hover {
@@ -53,6 +57,16 @@ body {
 .home .r-box {
   border-radius: 50%;
 }
+.home .profile-box .img-box {
+  padding: 12px;
+  width: 100%;
+  height: 100%;
+}
+.home .profile-box img {
+  margin-top: 20px;
+  width: 50%;
+  float: left;
+}
 
 @media (min-width: 0) {
   .container {
@@ -61,6 +75,18 @@ body {
     grid-template-rows: repeat(6, 100px);
     gap: 5px;
     padding: 12px;
+  }
+  .box {
+    font-size: 11.2px;
+    overflow: auto;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+  .box h1 {
+    font-size: 10.4px;
+  }
+  .box::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
   }
   .box-1 {
     grid-column: 1/3;
@@ -123,6 +149,12 @@ body {
     gap: 10px;
     padding: 18px;
   }
+  .box {
+    font-size: 14.4px;
+  }
+  .box h1 {
+    font-size: 16px;
+  }
   .box-1 {
     grid-column: 1/3;
     grid-row: 1/3;
@@ -183,6 +215,9 @@ body {
     grid-template-rows: repeat(6, 110px);
     gap: 8px;
     padding: 24px;
+  }
+  .box {
+    font-size: 14.4px;
   }
   .box-1 {
     grid-column: 1/4;
@@ -245,6 +280,12 @@ body {
     gap: 10px;
     padding: 30px;
   }
+  .box {
+    font-size: 14.4px;
+  }
+  .box h1 {
+    font-size: 20.8px;
+  }
   .box-1 {
     grid-column: 1/4;
     grid-row: 1/4;
@@ -305,6 +346,12 @@ body {
     grid-template-rows: repeat(5, 140px);
     gap: 15px;
     padding: 48px;
+  }
+  .box {
+    font-size: 14.4px;
+  }
+  .box h1 {
+    font-size: 25.6px;
   }
   .box-1 {
     grid-column: 1/4;

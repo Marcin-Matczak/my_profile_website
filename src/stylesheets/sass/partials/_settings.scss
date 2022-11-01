@@ -18,17 +18,18 @@ $font-header: 'Montserrat', sans-serif;
 $font-text: 'Merriweather', serif;
 
 $base-size: 12px;
+$font-size: 16px;
 
 $radius: 8px;
 
 /* Mixins */
 
 @mixin center() {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
 @mixin flex($flex-direction, $align-items, $justify-content) {
   display: flex;
