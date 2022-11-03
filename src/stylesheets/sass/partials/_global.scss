@@ -5,9 +5,25 @@
 body {
   @include center();
   background-color: $bg-light;
-  box-shadow: 10px 10px 17px -5px $text-light;
   margin: 0;
   font-family: $font-text;
+  max-height: 100vh;
+}
+
+main {
+  border-radius: $radius;
+  box-shadow: 10px 10px 17px -5px $text-light;
+  background-color: $text-light;
+  padding: $base-size / 4;
+}
+
+.home {
+  background: $home-light;
+  border-radius: $radius;
+}
+
+.container {
+  border-radius: $radius;  
 }
 
 h1 {

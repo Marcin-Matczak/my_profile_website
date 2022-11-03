@@ -12,9 +12,25 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   background-color: #eeeae3;
-  box-shadow: 10px 10px 17px -5px #121716;
   margin: 0;
   font-family: "Merriweather", serif;
+  max-height: 100vh;
+}
+
+main {
+  border-radius: 8px;
+  box-shadow: 10px 10px 17px -5px #121716;
+  background-color: #121716;
+  padding: 3px;
+}
+
+.home {
+  background: #f9f6f2;
+  border-radius: 8px;
+}
+
+.container {
+  border-radius: 8px;
 }
 
 h1 {
@@ -22,11 +38,7 @@ h1 {
   text-transform: uppercase;
 }
 
-.home {
-  background: #f9f6f2;
-  border-radius: 8px;
-}
-.home .box {
+.box {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -37,32 +49,34 @@ h1 {
   color: #121716;
   box-shadow: inset 0px 0px 30px 5px #121716;
 }
-.home .box a {
+.box a {
   display: flex;
   height: 100%;
 }
-.home .box img {
+.box img {
   object-fit: contain;
   padding: 12px;
 }
-.home .box img:hover {
+.box img:hover {
   transform: scale(1.1);
   transition: 0.9s;
 }
-.home .box:hover {
+.box:hover {
   background: #e3ded7;
   box-shadow: 0px 0px 15px 5px #121716;
   cursor: pointer;
 }
-.home .r-box {
+
+.r-box {
   border-radius: 50%;
 }
-.home .profile-box .img-box {
+
+.profile-box .img-box {
   padding: 12px;
   width: 100%;
   height: 100%;
 }
-.home .profile-box img {
+.profile-box img {
   margin-top: 20px;
   width: 50%;
   float: left;
