@@ -1,10 +1,14 @@
+.home {
+  background: var(--main);
+  border-radius: $radius;
+}
+
 .box {
   @include flex(row, center, center);
-  background: $primary-light;
-  border: 2px solid $text-light;
+  background: var(--primary);
+  border: 2px solid var(--shadow);
   border-radius: $radius;
-  color: $text-light;
-  box-shadow: inset 0px 0px 30px 5px $text-light;
+  color: var(--text);
 
   a{
     display: flex;
@@ -22,8 +26,8 @@
   }
 
   &:hover {
-    background: lighten($primary-light, 3%);
-    box-shadow: 0px 0px 15px 5px $text-light;
+    background: var(--secondary);
+    box-shadow: 0px 0px 15px 5px var(--shadow);
     cursor: pointer;
   }
 }

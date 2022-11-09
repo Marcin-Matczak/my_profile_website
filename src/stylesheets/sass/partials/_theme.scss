@@ -1,0 +1,55 @@
+:root {
+  --bg-light: #FDF6EC;
+  --main-light: #DAB88B;
+  --primary-light: #F3E9DD;
+  --secondary-light: linear-gradient(63deg, rgba(218,184,139,1) 0%, rgba(253,246,236,1) 100%);
+  --text-light: #121716;
+  --shadow-light: #121716;
+   
+  --bg-dark: #0F0E0E;
+  --main-dark: #191919;
+  --primary-dark: #2B2B2B;
+  --secondary-dark: #0F0E0E;
+  --shadow-dark: #423F3E;
+  --text-dark: #CDCDCD;
+}
+
+@media(color-scheme: light){
+  :root {
+    --bg: var(--bg-light);
+    --main: var(--main-light);
+    --primary: var(--primary-light);
+    --secondary: var(--secondary-light);
+    --text: var(--text-light);
+    --shadow: var(--shadow-light);
+  }
+}
+
+@media(color-scheme: dark){
+  :root {
+    --bg: var(--bg-dark);
+    --main: var(--main-dark);
+    --primary: var(--primary-dark);
+    --secondary: var(--secondary-dark);
+    --text: var(--text-dark);
+    --shadow: var(--shadow-dark);
+  }
+}
+  
+[theme-mode = 'light'] {
+  --bg: var(--bg-light);
+  --main: var(--main-light);
+  --primary: var(--primary-light);
+  --secondary: var(--secondary-light);
+  --text: var(--text-light);
+  --shadow: var(--shadow-light);
+}
+  
+[theme-mode = 'dark'] {
+  --bg: var(--bg-dark);
+  --main: var(--main-dark);
+  --primary: var(--primary-dark);
+  --secondary: var(--secondary-dark);
+  --text: var(--text-dark);
+  --shadow: var(--shadow-dark);
+}
