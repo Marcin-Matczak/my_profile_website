@@ -1,0 +1,113 @@
+.contact-form {
+  padding: 0 $base-size 0 $base-size;
+  
+  &:hover {
+    cursor: auto;
+  }
+}
+  
+form {
+  height: 90%;
+  width: 100%;
+  text-align: center;
+}
+
+fieldset {
+  height: 100%;
+  border-radius: $radius;
+}
+  
+legend {
+  text-align: center;
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+  
+.content-form {
+  @include flex (none, center, center);
+  height: 100%;
+}
+
+.content-form > * {
+  padding: 24px;
+}
+  
+.input-group{
+  padding: 8px;
+}
+  
+input, textarea {
+  width: 100%;
+  margin-top: 3px;
+  padding: $base-size / 2;
+  border: 1px solid var(--shadow);
+  background: transparent;
+  color: var(--text);
+}
+  
+textarea {
+  height: 136px;
+}
+  
+.btn-form {
+  background: transparent;
+  border: 1px solid var(--text);
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    background-color: var(--primary);
+  }
+}
+
+@keyframes movingEnvelop {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+.confirm{
+  @include flex(column, center, center);
+  height: 100%;
+
+  p {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .envelop-img {
+    width: 60%;
+    padding: 0;
+    animation: 1.8s linear 0s infinite running movingEnvelop;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+@media (min-width: map-get($breakpoints, "xs")) {
+  form {
+    display: none;
+  }
+}
+
+@media (min-width: map-get($breakpoints, "sm")) {
+  form {
+    display: none;
+  }
+}
+
+@media (min-width: map-get($breakpoints, "md")) {
+  .contact-form a {
+  display: none;
+ }
+
+  form {
+    display: block;
+  }
+}

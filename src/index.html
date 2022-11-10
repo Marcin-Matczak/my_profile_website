@@ -53,7 +53,70 @@
               <img src="./images/linkedin.png" alt="linkedin-img" />
             </a>
           </div>
-          <div class="box box-5">Contact Form</div>
+          <div class="box box-5 contact-form">
+            <a href="mailto:marcorn.88@gmail.com">
+              <img src="./images/mail.png" alt="mail-img" />
+            </a>
+            <form
+              action="https://formsubmit.io/send/marcorn.88@gmail.com"
+              method="POST"
+              id="form"
+            >
+              <fieldset>
+                <legend>Contact me</legend>
+                <div id="info-msg" class="confirm hide">
+                  <div>
+                    <p>Your email has been sent. Thank`s for the message!</p>
+                  </div>
+                  <div>
+                    <img src="./images/sent.png" alt="envelop-img" class="envelop-img"/>
+                  </div>  
+                </div>
+                <div class="content-form" id="contentForm">
+                  <div>
+                    <div class="input-group">
+                      <label for="name">Your Name</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        maxlength="30"
+                        placeholder="Type your name"
+                        required
+                      />
+                    </div>
+                    <div class="input-group">
+                      <label for="mail">Your e-mail</label>
+                      <input
+                        type="mail"
+                        id="mail"
+                        name="mail"
+                        maxlength="30"
+                        placeholder="Type your address"
+                        required
+                      />
+                    </div>
+                    <div class="input-group">
+                      <input type="submit" value="send" class="btn-form"></button>
+                      <input name="_redirect" type="hidden" id="name" value="http://127.0.0.1:5500/src/">
+                    </div>
+                  </div>
+                  <div>
+                    <div class="input-group">
+                      <label for="msg">Your message</label>
+                      <textarea
+                        name="msg"
+                        id="msg"
+                        maxlength="150"
+                        placeholder="Type your message"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
           <div class="box box-6">
             <a href="">
               <img src="/src/images/games.png" alt="games-img" />

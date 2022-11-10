@@ -36,3 +36,20 @@ switchThemeButton.addEventListener("click", (event) => {
 window.addEventListener('DOMContentLoaded', () => {
     loadTheme(getCurrentTheme());
 });
+/** Contact form handling */
+const contactContent = document.getElementById('contentForm');
+const btnForm = document.querySelector('.btn-form');
+const formFunctionality = document.getElementById('form');
+const infoMessage = document.getElementById('info-msg');
+function mailSent() {
+    contactContent.classList.add('hide');
+    infoMessage.classList.remove('hide');
+}
+function placeOrder(form) {
+    setTimeout(form.submit(), 3500);
+}
+btnForm.addEventListener('click', (event) => {
+    event.preventDefault();
+    mailSent();
+    placeOrder(formFunctionality);
+});
