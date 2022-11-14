@@ -1,5 +1,11 @@
 @media (min-width: map-get($breakpoints, "xs")) {
 
+  main {
+    width: 340px;
+    height: 653px;
+    background-color: var(--main);
+  }
+
   .container {
     @include grid-layout(3, 6, 100px, 5px);
     padding: $base-size;
@@ -81,6 +87,11 @@
 }
 
 @media (min-width: map-get($breakpoints, "sm")) {
+
+  main {
+    width: 482px;
+    height: 930px;
+  }
       
   .container {
     @include grid-layout(3, 6, 140px, 10px);
@@ -163,6 +174,11 @@
 
 @media (min-width: map-get($breakpoints, "md")) {
 
+  main {
+    width: 754px;
+    height: 752px;
+  }
+
   .container {
     @include grid-layout(6, 6, 110px, 8px);
     padding: $base-size * 2;
@@ -239,6 +255,11 @@
 }
 
 @media (min-width: map-get($breakpoints, "lg")) {
+
+  main {
+    width: 966px;
+    height: 704px;
+  }
 
   .container {
     @include grid-layout(7, 5, 120px, 10px);
@@ -321,6 +342,11 @@
 }
 
 @media (min-width: map-get($breakpoints, "xl")) {
+
+  main {
+    width: 1170px;
+    height: 860px;
+  }
     
   .container {
     @include grid-layout(7, 5, 140px, 15px);

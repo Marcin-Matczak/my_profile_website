@@ -53,3 +53,20 @@ btnForm.addEventListener('click', (event) => {
     mailSent();
     placeOrder(formFunctionality);
 });
+/** Home button functionality */
+const homeSection = document.getElementById('home');
+console.log('home', homeSection);
+const homeButton = document.getElementById('home-btn');
+console.log('button', homeButton);
+const galleryBox = document.querySelector('.box-2');
+console.log('gallery', galleryBox);
+galleryBox.addEventListener("click", (event) => {
+    event.preventDefault();
+    homeSection.classList.add('hide');
+    homeButton.classList.remove('hide');
+});
+homeButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    homeSection.classList.remove('hide');
+    homeButton.classList.add('hide');
+});

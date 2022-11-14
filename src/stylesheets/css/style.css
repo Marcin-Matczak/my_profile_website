@@ -73,8 +73,9 @@ body {
 main {
   border-radius: 8px;
   box-shadow: 10px 10px 17px -5px var(--shadow);
-  background-color: var(--shadow);
-  padding: 2px;
+  background-color: var(--bg);
+  border: 2px solid var(--shadow);
+  position: relative;
 }
 
 h1 {
@@ -142,6 +143,12 @@ h1 {
   float: left;
 }
 
+.home-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
 .contact-form {
   padding: 0 12px 0 12px;
 }
@@ -152,7 +159,6 @@ h1 {
 form {
   height: 90%;
   width: 100%;
-  text-align: center;
 }
 
 fieldset {
@@ -254,6 +260,11 @@ textarea {
   }
 }
 @media (min-width: 0) {
+  main {
+    width: 340px;
+    height: 653px;
+    background-color: var(--main);
+  }
   .container {
     display: grid;
     grid-template-columns: repeat(3, 100px);
@@ -321,6 +332,10 @@ textarea {
   }
 }
 @media (min-width: 576px) {
+  main {
+    width: 482px;
+    height: 930px;
+  }
   .container {
     display: grid;
     grid-template-columns: repeat(3, 140px);
@@ -388,6 +403,10 @@ textarea {
   }
 }
 @media (min-width: 768px) {
+  main {
+    width: 754px;
+    height: 752px;
+  }
   .container {
     display: grid;
     grid-template-columns: repeat(6, 110px);
@@ -452,6 +471,10 @@ textarea {
   }
 }
 @media (min-width: 992px) {
+  main {
+    width: 966px;
+    height: 704px;
+  }
   .container {
     display: grid;
     grid-template-columns: repeat(7, 120px);
@@ -519,6 +542,10 @@ textarea {
   }
 }
 @media (min-width: 1200px) {
+  main {
+    width: 1170px;
+    height: 860px;
+  }
   .container {
     display: grid;
     grid-template-columns: repeat(7, 140px);
