@@ -15,13 +15,13 @@ function getCurrentTheme(){
 function loadTheme(theme: string) {
   const root = document.querySelector(':root');
   if(theme === 'light'){
-    switchThemeButton.src = "./images/moon.png";
-    gitImgBox.src = "./images/git-dark.png";
-    profileImg.src = "./images/profile.png"; 
+    switchThemeButton.src = "../src/images/icons/moon.png";
+    gitImgBox.src = "../src/images/icons/git-dark.png";
+    profileImg.src = "../src/images/icons/profile.png"; 
   } else {
-    switchThemeButton.src = "./images/sun.png";
-    gitImgBox.src = "./images/github-light.png";
-    profileImg.src = "./images/profile-dark.png"; 
+    switchThemeButton.src = "../src/images/icons/sun.png";
+    gitImgBox.src = "../src/images/icons/github-light.png";
+    profileImg.src = "../src/images/icons/profile-dark.png"; 
   }
   root.setAttribute('theme-mode', `${theme}`);
 }
@@ -72,23 +72,28 @@ btnForm.addEventListener('click', (event)=> {
 /** Home button functionality */
 
 const homeSection: HTMLElement = document.getElementById('home');
-console.log('home', homeSection);
 
-const homeButton: HTMLElement = document.getElementById('home-btn');
-console.log('button', homeButton);
+const gallerySection: HTMLElement = document.getElementById('gallery');
+
+const homeButton: HTMLElement = document.getElementById('back-btn');
 
 const galleryBox: HTMLMapElement = document.querySelector('.box-2');
-console.log('gallery', galleryBox);
 
 
 galleryBox.addEventListener("click", (event)=> {
   event.preventDefault();
   homeSection.classList.add('hide');
   homeButton.classList.remove('hide');
+  gallerySection.classList.remove('hide');
 })
 
 homeButton.addEventListener("click", (event)=> {
   event.preventDefault();
   homeSection.classList.remove('hide');
   homeButton.classList.add('hide');
+  gallerySection.classList.add('hide');  
 })
+
+
+/** Gallery */
+

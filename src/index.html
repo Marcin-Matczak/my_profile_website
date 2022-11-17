@@ -15,12 +15,12 @@
   </head>
   <body>
     <main>
-      <button id="home-btn" class="home-btn hide">Home</button>
+      <button id="back-btn" class="back-btn r-box hide"><i class="fa-solid fa-arrow-left home-ing"></i><span class="hide">back</span></button>
       <section id="home" class="home">
         <div class="container">
           <div class="box box-1 profile-box">
             <div class="img-box">
-              <img src="" alt="profile-img" id="profileImg" />
+              <img src="" alt="profile-img" id="profileImg" class="icon-home" />
               <h1>Hi, I`m Marcin</h1>
               <p>
                 I'm a beginner web developer based in Lodz, Poland.
@@ -46,17 +46,17 @@
           <div class="box box-2">Gallery In</div>
           <div class="box r-box box-3">
             <a href="https://github.com/Marcin-Matczak" target="_blank">
-              <img src="" alt="github-img" id="gitImg" />
+              <img src="" alt="github-img" id="gitImg" class="icon-home" />
             </a>
           </div>
           <div class="box box-4">
             <a href="">
-              <img src="./images/linkedin.png" alt="linkedin-img" />
+              <img src="../src/images/icons/linkedin.png" alt="linkedin-img" class="icon-home" />
             </a>
           </div>
           <div class="box box-5 contact-form">
             <a href="mailto:marcorn.88@gmail.com">
-              <img src="./images/mail.png" alt="mail-img" />
+              <img src="../src/images/icons/mail.png" alt="mail-img" class="icon-home"/>
             </a>
             <form
               action="https://formsubmit.io/send/marcorn.88@gmail.com"
@@ -70,7 +70,7 @@
                     <p>Your email has been sent. Thank`s for the message!</p>
                   </div>
                   <div>
-                    <img src="./images/sent.png" alt="envelop-img" class="envelop-img"/>
+                    <img src="../src/images/icons/sent.png" alt="envelop-img" class="envelop-img"/>
                   </div>  
                 </div>
                 <div class="content-form" id="contentForm">
@@ -120,29 +120,29 @@
 
           <div class="box box-6">
             <a href="">
-              <img src="/src/images/games.png" alt="games-img" />
+              <img src="../src/images/icons/games.png" alt="games-img" class="icon-home"/>
             </a>
           </div>
           <div class="box r-box box-7">Clock</div>
           <div class="box box-8">
             <a href="">
-              <img src="./images/certificate.png" alt="certificates-img" />
+              <img src="../src/images/icons/certificate.png" alt="certificates-img" class="icon-home"/>
             </a>
           </div>
           <div class="box box-9">
             <a href="">
-              <img src="./images/projects.png" alt="projects-img" />
+              <img src="../src/images/icons/projects.png" alt="projects-img" class="icon-home"/>
             </a>
           </div>
           <div class="box box-10">Visits</div>
           <div class="box box-11">
             <a href="">
-              <img src="./images/cv.png" alt="cv-img" />
+              <img src="../src/images/icons/cv.png" alt="cv-img" class="icon-home"/>
             </a>
           </div>
           <div class="box r-box box-12">
             <a href="">
-              <img src="./images/skill.png" alt="skills-img" />
+              <img src="../src/images/icons/skill.png" alt="skills-img" class="icon-home"/>
             </a>
           </div>
           <button
@@ -151,14 +151,32 @@
             aria-label="theme mode"
           >
             <a href="">
-              <img src="" alt="theme-img" id="themeImg" />
+              <img src="" alt="theme-img" id="themeImg" class="icon-home"/>
             </a>
           </button>
         </div>
       </section>
-      <section id="gallery" class="gallery">
+      <section id="gallery" class="hide">
+        <div class="container gallery">
+          <img src="../src/images/gallery/cat-1.png" alt="cat-photo">
+          <img src="../src/images/gallery/clouds-2.png" alt="clouds-photo">
+          <img src="../src/images/gallery/dog-3.png" alt="dog1-photo">
+          <img src="../src/images/gallery/flowers-4.png" alt="flowers-photo">
+          <img src="../src/images/gallery/food-5.png" alt="food-photo">
+          <img src="../src/images/gallery/forest-6.png" alt="forest-photo">
+          <img src="../src/images/gallery/waves-7.png" alt="waves-photo">
+          <img src="../src/images/gallery/dog-8.png" alt="dog2-photo">
+          <img src="../src/images/gallery/ship-9.png" alt="ship-photo">
+          <img src="../src/images/gallery/rabbit-10.png" alt="rabbit-photo">
+          <img src="../src/images/gallery/chimney-11.png" alt="chimney-photo">
+          <img src="../src/images/gallery/city-12.png" alt="city-photo">
+          <img src="../src/images/gallery/moto-13.png" alt="moto-photo">
+          <img src="../src/images/gallery/tent-14.png" alt="tent-photo">
+          <img src="../src/images/gallery/toadstool-15.png" alt="toadstool-photo">
+        </div>
       </section>
     </main>
+    <script src="https://kit.fontawesome.com/edb01b40e4.js" crossorigin="anonymous"></script>
     <script type="module" src="../dist/ts/app.js"></script>
   </body>
 </html>
