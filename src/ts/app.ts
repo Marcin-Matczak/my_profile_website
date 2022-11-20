@@ -75,25 +75,60 @@ const homeSection: HTMLElement = document.getElementById('home');
 
 const gallerySection: HTMLElement = document.getElementById('gallery');
 
-const homeButton: HTMLElement = document.getElementById('back-btn');
+const backButton: HTMLElement = document.getElementById('back-btn');
 
 const galleryBox: HTMLMapElement = document.querySelector('.box-2');
 
+const backOne = () => {
+  if(popupWrapper.classList.contains('active')){
+    popupWrapper.classList.remove('active')
+  } else {
+    homeSection.classList.remove('hide');
+    backButton.classList.add('hide');
+    gallerySection.classList.add('hide');  
+  }
+}
 
 galleryBox.addEventListener("click", (event)=> {
   event.preventDefault();
   homeSection.classList.add('hide');
-  homeButton.classList.remove('hide');
+  backButton.classList.remove('hide');
   gallerySection.classList.remove('hide');
 })
 
-homeButton.addEventListener("click", (event)=> {
+backButton.addEventListener("click", (event)=> {
   event.preventDefault();
-  homeSection.classList.remove('hide');
-  homeButton.classList.add('hide');
-  gallerySection.classList.add('hide');  
+  backOne();
 })
 
 
 /** Gallery */
+
+const thumbnails = document.querySelectorAll(".gallery img");
+const popupWrapper = document.querySelector('.popup');
+const popupWindow = document.querySelector('.popup__img') as HTMLImageElement;
+const photoIdArray = [];
+
+for(let thumbnail of thumbnails){
+
+  const photoName = thumbnail.getAttribute('src').replace("../src/images/gallery/","");
+  const photoLink = "../src/images/gallery/" + `${photoName}`;
+  photoIdArray.push(photoLink);  
+
+  thumbnail.addEventListener("click", () => {
+    popupWindow.src = photoLink;
+    popupWrapper.classList.add('active');
+  });
+}
+
+console.log(photoIdArray);
+
+const nextPhotoButton = document.querySelector('.next');
+console.log(nextPhotoButton);
+
+const previousPhotoButton = document.querySelector('.previous');
+console.log(previousPhotoButton);
+
+
+
 
