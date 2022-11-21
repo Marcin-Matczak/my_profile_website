@@ -104,31 +104,37 @@ backButton.addEventListener("click", (event)=> {
 
 /** Gallery */
 
-const thumbnails = document.querySelectorAll(".gallery img");
-const popupWrapper = document.querySelector('.popup');
-const popupWindow = document.querySelector('.popup__img') as HTMLImageElement;
-const photoIdArray = [];
+const thumbnails: NodeList = document.querySelectorAll(".gallery img");
+const popupWrapper: HTMLElement = document.querySelector('.popup');
+const popupWindow: HTMLImageElement = document.querySelector('.popup__img');
+const nextPhotoButton: HTMLElement = document.querySelector('.next');
+const previousPhotoButton: HTMLElement = document.querySelector('.previous');
 
-for(let thumbnail of thumbnails){
 
-  const photoName = thumbnail.getAttribute('src').replace("../src/images/gallery/","");
-  const photoLink = "../src/images/gallery/" + `${photoName}`;
-  photoIdArray.push(photoLink);  
+let currentImgSrc: number;
 
-  thumbnail.addEventListener("click", () => {
-    popupWindow.src = photoLink;
+thumbnails.forEach((thumbnail, index) => {
+  thumbnail.addEventListener("click", (event) => {
     popupWrapper.classList.add('active');
-  });
-}
+    popupWindow.src = event.target.src;
+    currentImgSrc = index;
+  })
+});
 
-console.log(photoIdArray);
+nextPhotoButton.addEventListener("click", () => {
+  if(currentImgSrc === thumbnails.length -1) {
+    currentImgSrc = 0;
+  } else {
+    currentImgSrc++;
+  }
+  popupWindow.src = thumbnails[currentImgSrc].src;
+});
 
-const nextPhotoButton = document.querySelector('.next');
-console.log(nextPhotoButton);
-
-const previousPhotoButton = document.querySelector('.previous');
-console.log(previousPhotoButton);
-
-
-
-
+previousPhotoButton.addEventListener("click", () => {
+  if(currentImgSrc === 0) {
+    currentImgSrc = thumbnails.length -1;
+  } else {
+    currentImgSrc--;
+  }
+  popupWindow.src = thumbnails[currentImgSrc].src;
+});

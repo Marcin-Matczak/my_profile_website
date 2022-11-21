@@ -82,18 +82,31 @@ backButton.addEventListener("click", (event) => {
 const thumbnails = document.querySelectorAll(".gallery img");
 const popupWrapper = document.querySelector('.popup');
 const popupWindow = document.querySelector('.popup__img');
-const photoIdArray = [];
-for (let thumbnail of thumbnails) {
-    const photoName = thumbnail.getAttribute('src').replace("../src/images/gallery/", "");
-    const photoLink = "../src/images/gallery/" + `${photoName}`;
-    photoIdArray.push(photoLink);
-    thumbnail.addEventListener("click", () => {
-        popupWindow.src = photoLink;
-        popupWrapper.classList.add('active');
-    });
-}
-console.log(photoIdArray);
 const nextPhotoButton = document.querySelector('.next');
-console.log(nextPhotoButton);
 const previousPhotoButton = document.querySelector('.previous');
-console.log(previousPhotoButton);
+let currentImgSrc;
+thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener("click", (event) => {
+        popupWrapper.classList.add('active');
+        popupWindow.src = event.target.src;
+        currentImgSrc = index;
+    });
+});
+nextPhotoButton.addEventListener("click", () => {
+    if (currentImgSrc === thumbnails.length - 1) {
+        currentImgSrc = 0;
+    }
+    else {
+        currentImgSrc++;
+    }
+    popupWindow.src = thumbnails[currentImgSrc].src;
+});
+previousPhotoButton.addEventListener("click", () => {
+    if (currentImgSrc === 0) {
+        currentImgSrc = thumbnails.length - 1;
+    }
+    else {
+        currentImgSrc--;
+    }
+    popupWindow.src = thumbnails[currentImgSrc].src;
+});
