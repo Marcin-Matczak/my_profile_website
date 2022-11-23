@@ -44,6 +44,34 @@
   }
 }
 
+.box-2 img {  
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  filter: sepia(50%);
+  border-radius: 5px;
+}
+
+.info-board {
+  width: 20%;
+  height: 5%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  z-index: 1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius;
+  font-size: 14px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+
 .r-box {
   border-radius: 50%;
 }

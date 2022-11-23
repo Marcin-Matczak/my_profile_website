@@ -138,3 +138,57 @@ previousPhotoButton.addEventListener("click", () => {
   }
   popupWindow.src = thumbnails[currentImgSrc].src;
 });
+
+
+//** Gallery Home-Box */
+
+const photoChangingBox = document.getElementById('photoSlider');
+
+const photoSliderArray = [];
+
+let randomNumber = Math.floor(Math.random()*15)+1; // losowa liczba od 0 do 15
+
+for(let thumbnail of thumbnails) {
+  const imgSrc = thumbnail.getAttribute('src');
+  photoSliderArray.push(imgSrc);
+}
+
+const changeSlide = function() {
+  randomNumber++;
+
+  if(randomNumber > 14) {
+    randomNumber = 0;
+  }
+
+  let randomIndexOfArray = photoSliderArray[randomNumber];
+  photoChangingBox.src = randomIndexOfArray;  
+  setTimeout(changeSlide, 5000);
+}
+changeSlide();
+
+/** Clock */
+
+const secondHand = document.querySelector('.second-hand');
+const minsHand = document.querySelector('.min-hand');
+const hourHand = document.querySelector('.hour-hand');
+
+ function setDate() {
+  const now = new Date();
+
+  const seconds = now.getSeconds();
+  const secondsDegrees = ((seconds / 60) * 360) + 90;
+  secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+
+  const mins = now.getMinutes();
+  const minsDegrees = ((mins / 60) * 360) + ((seconds/60)*6) + 90;
+  minsHand.style.transform = `rotate(${minsDegrees}deg)`;
+
+  const hour = now.getHours();
+  const hourDegrees = ((hour / 12) * 360) + ((mins/60)*30) + 90;
+  hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+}
+
+setInterval(setDate, 1000);
+
+setDate();
+  
