@@ -69,7 +69,7 @@ btnForm.addEventListener('click', (event)=> {
 });
 
 
-/** Home button functionality */
+/** Home buttons functionality */
 
 const homeSection: HTMLElement = document.getElementById('home');
 
@@ -79,13 +79,18 @@ const backButton: HTMLElement = document.getElementById('back-btn');
 
 const galleryBox: HTMLMapElement = document.querySelector('.box-2');
 
+const certificatesBox: HTMLMapElement = document.querySelector('.box-8');
+
+const certificatesSection: HTMLElement = document.getElementById('certificates');
+
 const backOne = () => {
   if(popupWrapper.classList.contains('active')){
     popupWrapper.classList.remove('active')
   } else {
     homeSection.classList.remove('hide');
     backButton.classList.add('hide');
-    gallerySection.classList.add('hide');  
+    gallerySection.classList.add('hide');
+    certificatesSection.classList.add('hide');   
   }
 }
 
@@ -94,12 +99,19 @@ galleryBox.addEventListener("click", (event)=> {
   homeSection.classList.add('hide');
   backButton.classList.remove('hide');
   gallerySection.classList.remove('hide');
+});
+
+certificatesBox.addEventListener("click", (event) => {
+  event.preventDefault();
+  homeSection.classList.add('hide');
+  backButton.classList.remove('hide');
+  certificatesSection.classList.remove('hide');
 })
 
 backButton.addEventListener("click", (event)=> {
   event.preventDefault();
   backOne();
-})
+});
 
 
 /** Gallery */

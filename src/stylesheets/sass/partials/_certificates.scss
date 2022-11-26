@@ -1,0 +1,53 @@
+#certificates {
+  @include center();
+  width: 92%;
+  height: 90%;
+  background-color: var(--primary);
+  position: absolute;
+  border-radius: $radius;
+  border: 2px solid var(--shadow);
+}
+
+.certificates {
+  height: 100%;
+  @include flex(row, center, space-evenly);  
+  flex-wrap: wrap;  
+  padding: 0;
+  margin: 0;
+}
+
+.certificate {
+  max-width: 320px;
+  list-style-type: none;
+  transform: scale(1);
+  transition: transform 0.3s;
+  flex: 30%;
+
+  &:last-child {
+    scale: 1.2;
+  }
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    border: 4mm ridge #6b4b38;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1200px ) {
+  .certificate {
+    margin: 10px;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 766px) {
+  .certificate:last-child {
+    scale: 1;
+  }
+}
