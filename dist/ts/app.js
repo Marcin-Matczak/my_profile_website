@@ -155,3 +155,24 @@ function setDate() {
 }
 setInterval(setDate, 1000);
 setDate();
+/** Certificates */
+const certificates = document.querySelectorAll(".certificate");
+const removeZoom = function () {
+    for (let certificate of certificates) {
+        certificate.classList.remove("zoom");
+    }
+};
+const clickHandler = function (event) {
+    event.preventDefault();
+    const clickedElement = this;
+    if (clickedElement.classList.contains("zoom")) {
+        removeZoom();
+    }
+    else {
+        removeZoom();
+        clickedElement.classList.add("zoom");
+    }
+};
+for (let certificate of certificates) {
+    certificate.addEventListener("click", clickHandler);
+}

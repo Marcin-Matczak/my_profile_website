@@ -1149,6 +1149,7 @@ textarea {
 
 .certificates {
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1164,18 +1165,47 @@ textarea {
   transform: scale(1);
   transition: transform 0.3s;
   flex: 30%;
+  border: 4mm ridge #6b4b38;
+  overflow: hidden;
+  cursor: zoom-in;
 }
-.certificate:last-child {
-  scale: 1.2;
+.certificate::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right top, rgba(131, 168, 183, 0.4), rgba(0, 0, 0, 0));
+  position: absolute;
+}
+.certificate::after {
+  content: "";
+  height: 150%;
+  width: 50px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: rotate(20deg);
+  transition: transform 0.6s;
+  left: -120px;
+  top: -50px;
 }
 .certificate:hover {
   transform: scale(1.05);
 }
+.certificate:hover:after {
+  transform: translateX(500px) rotate(20deg);
+}
 .certificate img {
   height: 100%;
   width: 100%;
-  border: 4mm ridge #6b4b38;
-  object-fit: cover;
+  margin-bottom: -4px;
+}
+
+.zoom {
+  scale: 2.7;
+  z-index: 1;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
 }
 
 @media (max-width: 1200px) {
@@ -1185,8 +1215,12 @@ textarea {
   }
 }
 @media (max-width: 766px) {
-  .certificate:last-child {
-    scale: 1;
+  .zoom {
+    scale: 1.4;
+    z-index: 1;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
   }
 }
 .clock {
