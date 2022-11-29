@@ -60,6 +60,8 @@ const backButton = document.getElementById('back-btn');
 const galleryBox = document.querySelector('.box-2');
 const certificatesBox = document.querySelector('.box-8');
 const certificatesSection = document.getElementById('certificates');
+const cvSection = document.getElementById('cv');
+const cvBox = document.querySelector('.box-11');
 const backOne = () => {
     if (popupWrapper.classList.contains('active')) {
         popupWrapper.classList.remove('active');
@@ -69,6 +71,7 @@ const backOne = () => {
         backButton.classList.add('hide');
         gallerySection.classList.add('hide');
         certificatesSection.classList.add('hide');
+        cvSection.classList.add('hide');
     }
 };
 galleryBox.addEventListener("click", (event) => {
@@ -82,6 +85,12 @@ certificatesBox.addEventListener("click", (event) => {
     homeSection.classList.add('hide');
     backButton.classList.remove('hide');
     certificatesSection.classList.remove('hide');
+});
+cvBox.addEventListener("click", (event) => {
+    event.preventDefault();
+    homeSection.classList.add('hide');
+    backButton.classList.remove('hide');
+    cvSection.classList.remove('hide');
 });
 backButton.addEventListener("click", (event) => {
     event.preventDefault();
