@@ -62,6 +62,8 @@ const certificatesBox = document.querySelector('.box-8');
 const certificatesSection = document.getElementById('certificates');
 const cvSection = document.getElementById('cv');
 const cvBox = document.querySelector('.box-11');
+const skillsSection = document.getElementById('skills');
+const skillsBox = document.querySelector('.box-12');
 const backOne = () => {
     if (popupWrapper.classList.contains('active')) {
         popupWrapper.classList.remove('active');
@@ -72,6 +74,7 @@ const backOne = () => {
         gallerySection.classList.add('hide');
         certificatesSection.classList.add('hide');
         cvSection.classList.add('hide');
+        skillsSection.classList.add('hide');
     }
 };
 galleryBox.addEventListener("click", (event) => {
@@ -92,9 +95,17 @@ cvBox.addEventListener("click", (event) => {
     backButton.classList.remove('hide');
     cvSection.classList.remove('hide');
 });
+skillsBox.addEventListener("click", (event) => {
+    event.preventDefault();
+    homeSection.classList.add('hide');
+    backButton.classList.remove('hide');
+    skillsSection.classList.remove('hide');
+    setAnimation();
+});
 backButton.addEventListener("click", (event) => {
     event.preventDefault();
     backOne();
+    removeAnimation();
 });
 /** Gallery */
 const thumbnails = document.querySelectorAll(".gallery img");
@@ -185,3 +196,22 @@ const clickHandler = function (event) {
 for (let certificate of certificates) {
     certificate.addEventListener("click", clickHandler);
 }
+/** Skills */
+const techStackIcons = document.querySelectorAll('tbody img');
+function animation() {
+    let delay = 0;
+    for (let i = 0; i < techStackIcons.length; i++) {
+        setTimeout(() => techStackIcons[i].classList.add('move'), delay);
+        delay = delay + 200;
+    }
+}
+const removeAnimation = function () {
+    for (let icon of techStackIcons) {
+        icon.classList.remove('move');
+    }
+};
+const setAnimation = function () {
+    setTimeout(() => {
+        animation();
+    }, 300);
+};
