@@ -1,6 +1,126 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap");
 /* Variables */
 /* Mixins */
+#skills {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 92%;
+  height: 90%;
+  background-color: var(--primary);
+  border-radius: 8px;
+  border: 2px solid var(--shadow);
+  padding: 12px;
+  color: var(--text);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 4px 4px;
+  font-size: 14px;
+}
+table th {
+  background-color: var(--bg);
+}
+table th h3 {
+  margin: 3px;
+}
+
+thead::after {
+  content: "";
+  display: block;
+  width: 100%;
+  background: var(--primary);
+}
+
+tr:hover {
+  background-color: var(--bg);
+}
+
+td:first-child {
+  width: 6%;
+  text-align: center;
+  padding: 0px;
+}
+td:first-child img {
+  width: 65%;
+  margin-top: 4px;
+}
+
+td, th {
+  border: 1px solid var(--shadow);
+  padding: 8px;
+}
+
+.move {
+  animation: bounce 0.9s cubic-bezier(0.59, -0.67, 0.24, 0.79) 2;
+  animation-direction: alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-80px);
+  }
+}
+@media (max-width: 1199px) {
+  td:first-child img {
+    width: 28px;
+    margin-top: 4px;
+  }
+}
+@media (max-width: 991px) {
+  td:first-child img {
+    width: 32px;
+    margin-top: 4px;
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(-40px);
+    }
+  }
+}
+@media (max-width: 767px) {
+  table {
+    font-size: 14px;
+  }
+  td:first-child img {
+    width: 43px;
+    margin-top: 4px;
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(-60px);
+    }
+  }
+}
+@media (max-width: 575px) {
+  table {
+    font-size: 12px;
+  }
+  td:first-child img {
+    width: 25px;
+    margin-top: 4px;
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(-40px);
+    }
+  }
+}
 /* RWD MAP */
 :root {
   --bg-light: #FDF6EC;
@@ -166,6 +286,7 @@ h1 {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  left: 0px;
 }
 
 .rotation-Y:hover {
@@ -179,7 +300,7 @@ h1 {
   height: 100%;
   width: 100%;
 }
-.rotation-Y:hover img {
+.rotation-Y:hover .icon-home {
   filter: blur(1.5px);
 }
 
@@ -194,7 +315,7 @@ h1 {
   height: 100%;
   width: 100%;
 }
-.rotation-X:hover img {
+.rotation-X:hover .icon-home {
   filter: blur(1.5px);
 }
 
@@ -1310,6 +1431,7 @@ article {
   background-color: var(--bg);
   overflow-y: auto;
   position: relative;
+  padding-bottom: 20px;
 }
 article > * {
   margin: 0 20px 0 20px;
@@ -1337,6 +1459,9 @@ a:link:hover {
   .cv-container {
     display: flex;
     flex-direction: column;
+  }
+  .cv-container article {
+    border-top: 2px solid var(--shadow);
   }
 }
 /* Scrollbars */
