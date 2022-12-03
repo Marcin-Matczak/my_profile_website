@@ -35,7 +35,7 @@ aside {
   }
 }
 
-article {
+.article {
   flex: 6;
   color: var(--text);
   background-color: var(--bg);
@@ -75,7 +75,7 @@ a:link {
     display: flex;
     flex-direction: column;
 
-    article {
+    .article {
       border-top: 2px solid var(--shadow);
     }
   }
