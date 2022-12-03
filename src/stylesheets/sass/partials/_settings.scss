@@ -32,3 +32,7 @@ $radius: 8px;
   grid-template-rows: repeat($row-value, $px);
   gap: $gap;
 }
+
+.hide {
+  display: none;
+}

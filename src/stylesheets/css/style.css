@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap");
 /* Variables */
 /* Mixins */
+.hide {
+  display: none;
+}
+
 #skills {
   position: absolute;
   left: 50%;
@@ -64,7 +68,7 @@ td, th {
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(-80px);
+    transform: translateX(-70px);
   }
 }
 @media (max-width: 1199px) {
@@ -119,6 +123,259 @@ td, th {
     100% {
       transform: translateX(-40px);
     }
+  }
+}
+#projects {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 92%;
+  height: 90%;
+  background-color: var(--primary);
+  border-radius: 8px;
+  border: 2px solid var(--shadow);
+  padding: 24px;
+  color: var(--text);
+}
+
+.flex-wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.heading {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 48px 0 12px 0;
+  text-decoration: underline;
+}
+
+.sidebar {
+  flex: 1 0 0;
+  text-align: center;
+}
+.sidebar:first-of-type ul > li {
+  padding: 8px;
+}
+
+.projects-wrapper {
+  flex: 5 0 0;
+  margin: 0 10px 0 10px;
+}
+.projects-wrapper img {
+  width: 25%;
+  margin-bottom: 12px;
+  object-fit: cover;
+  border: 1px solid var(--shadow);
+}
+
+.sidebar, .projects-wrapper {
+  background: var(--bg);
+  padding: 12px;
+  border: 1px solid var(--shadow);
+  border-radius: 8px;
+}
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.list .active {
+  font-weight: bold;
+}
+
+.list-horizontal li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.authors li {
+  margin-bottom: 12px;
+}
+
+.project {
+  display: none;
+}
+.project.active {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.project-title {
+  margin-bottom: 12px;
+}
+
+.project-author {
+  font-style: italic;
+}
+
+.project-tags {
+  display: flex;
+}
+.project-tags p {
+  margin: 0 10px 0 0;
+}
+
+.tag-size-1 {
+  font-size: 12px;
+}
+
+.tag-size-2 {
+  font-size: 16px;
+}
+
+.tag-size-3 {
+  font-size: 16px;
+}
+
+.tag-size-4 {
+  font-size: 18px;
+}
+
+.tag-size-5 {
+  font-size: 20px;
+}
+
+@media (max-width: 1199px) {
+  .project {
+    font-size: 14px;
+  }
+  .sidebar {
+    font-size: 14px;
+  }
+  .heading {
+    font-size: 16px;
+  }
+  .tag-size-1 {
+    font-size: 11px;
+  }
+  .tag-size-2 {
+    font-size: 15px;
+  }
+  .tag-size-3 {
+    font-size: 15px;
+  }
+  .tag-size-4 {
+    font-size: 17px;
+  }
+  .tag-size-5 {
+    font-size: 19px;
+  }
+}
+@media (max-width: 991px) {
+  .project {
+    font-size: 12px;
+  }
+  .sidebar {
+    font-size: 12px;
+  }
+  .heading {
+    font-size: 14px;
+  }
+  .tag-size-1 {
+    font-size: 9px;
+  }
+  .tag-size-2 {
+    font-size: 13px;
+  }
+  .tag-size-3 {
+    font-size: 13px;
+  }
+  .tag-size-4 {
+    font-size: 15px;
+  }
+  .tag-size-5 {
+    font-size: 17px;
+  }
+}
+@media (max-width: 767px) {
+  .projects-wrapper {
+    margin: 4px 0 4px 0;
+  }
+  .flex-wrapper {
+    flex-direction: column;
+  }
+  .project {
+    font-size: 12px;
+  }
+  .project.active {
+    width: 85%;
+  }
+  .sidebar {
+    font-size: 12px;
+  }
+  .heading {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+  .list li {
+    display: inline;
+  }
+  #projects {
+    padding: 10px;
+  }
+  .sidebar {
+    flex: 1.5 0 0;
+  }
+  .sidebar:first-of-type .heading {
+    margin-top: 36px;
+  }
+}
+@media (max-width: 575px) {
+  .projects-wrapper {
+    margin: 4px 0 4px 0;
+  }
+  .projects-wrapper img {
+    width: 30%;
+    margin: 0;
+  }
+  .flex-wrapper {
+    flex-direction: column;
+  }
+  .project {
+    font-size: 12px;
+  }
+  .project.active {
+    width: 85%;
+  }
+  .sidebar {
+    font-size: 12px;
+  }
+  .heading {
+    font-size: 14px;
+  }
+  .list {
+    padding: 2px;
+  }
+  .list li {
+    display: inline;
+  }
+  #projects {
+    padding: 10px;
+  }
+  .sidebar {
+    flex: 1.8 0 0;
+    padding: 3px;
+  }
+  .sidebar .heading {
+    margin: 0px;
+  }
+  .sidebar:first-of-type .heading {
+    margin-top: 4px;
+    padding: 2px;
+  }
+  .project-title {
+    margin: 0 0 4px 0;
   }
 }
 /* RWD MAP */
@@ -1425,7 +1682,7 @@ aside p {
   padding: 20px;
 }
 
-article {
+.article {
   flex: 6;
   color: var(--text);
   background-color: var(--bg);
@@ -1433,13 +1690,13 @@ article {
   position: relative;
   padding-bottom: 20px;
 }
-article > * {
+.article > * {
   margin: 0 20px 0 20px;
 }
-article h3 {
+.article h3 {
   text-decoration: underline;
 }
-article h3 i {
+.article h3 i {
   margin-right: 15px;
 }
 
@@ -1460,7 +1717,7 @@ a:link:hover {
     display: flex;
     flex-direction: column;
   }
-  .cv-container article {
+  .cv-container .article {
     border-top: 2px solid var(--shadow);
   }
 }
