@@ -388,7 +388,6 @@ const setAnimation = function(){
     return opts.CloudClassPrefix + classNumber;
   };
 
-
   const generateTags = function () {
     let allTags = {};
     const articles = document.querySelectorAll(opts.ArticleSelector);
@@ -500,7 +499,6 @@ const setAnimation = function(){
 
   generateAuthors();
 
-
   const authorClickHandler = function (event) {
     event.preventDefault();
     const clickedElement = this;
@@ -521,7 +519,6 @@ const setAnimation = function(){
     generateTitleLinks(`[data-author="${author}"]`);
   };
 
-
   const addClickListenersToAuthors = function () {
     const authorLinks = document.querySelectorAll('a[href^="#author-"]');
 
@@ -531,7 +528,19 @@ const setAnimation = function(){
   };
 
   addClickListenersToAuthors();
+}
 
 
+/** Visitors */
 
+const counter = document.getElementById('count');
+
+updateVisitCount();
+
+function updateVisitCount() {
+	fetch('https://api.countapi.xyz/update/m-marcin/home/?amount=1')
+	.then(res => res.json())
+	.then(res => {
+		counter.innerHTML = res.value;
+	})
 }

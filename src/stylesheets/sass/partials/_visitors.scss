@@ -1,0 +1,27 @@
+.box-10{
+  box-shadow: inset 0px 0px 30px -10px rgba(0, 0, 0, 1);
+  &:hover {
+    cursor: auto;
+  }
+}
+
+#count {
+  display: inline;
+  color: #cc0000;
+  font-size: 26px;
+}
+
+.counter {
+  text-align: center;
+  
+  p, sup {
+    margin: 4px;
+    background: -webkit-linear-gradient(138deg, rgba(151,0,212,1) 18%, rgba(180,101,0,1) 85%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  sup {
+    display: inline;
+  }
+}
