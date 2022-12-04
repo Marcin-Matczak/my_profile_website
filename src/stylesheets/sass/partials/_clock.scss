@@ -1,6 +1,7 @@
 .clock {
   position: relative;
   pointer-events: none;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
 }
 
 .outer-clock-face {
@@ -21,7 +22,7 @@
 .outer-clock-face .marking{
   content: '';
   position: absolute;
-  width: 2px;
+  width: 3px;
   height: 100%;
   background: var(--text);
   left: 49%;
