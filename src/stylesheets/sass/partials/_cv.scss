@@ -17,7 +17,7 @@
 }
 
 aside {
-  flex: 3;
+  flex: 4;
   color: var(--text);
   background-color: var(--primary);
   overflow-y: auto;
@@ -31,7 +31,7 @@ aside {
   }
 
   p {
-    padding: 20px;
+    margin: 0 8px 25px 12px;
   }
 }
 
@@ -49,6 +49,7 @@ aside {
 
   h3 {
     text-decoration: underline;
+    margin-bottom: 20px;
 
     i {
       margin-right: 15px;

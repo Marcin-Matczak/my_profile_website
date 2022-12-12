@@ -1702,7 +1702,7 @@ textarea {
 }
 
 aside {
-  flex: 3;
+  flex: 4;
   color: var(--text);
   background-color: var(--primary);
   overflow-y: auto;
@@ -1714,7 +1714,7 @@ aside h2 i {
   margin-right: 15px;
 }
 aside p {
-  padding: 20px;
+  margin: 0 8px 25px 12px;
 }
 
 .article {
@@ -1730,6 +1730,7 @@ aside p {
 }
 .article h3 {
   text-decoration: underline;
+  margin-bottom: 20px;
 }
 .article h3 i {
   margin-right: 15px;
