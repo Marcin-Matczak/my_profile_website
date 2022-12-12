@@ -1,12 +1,4 @@
-.contact-form {
-  padding: 0 $base-size 0 $base-size;
-  
-  &:hover {
-    cursor: auto;
-  }
-}
-  
-form {
+ form {
   height: 90%;
   width: 100%;
 }
@@ -93,11 +85,17 @@ textarea {
   form {
     display: none;
   }
+  .contact-form {
+    padding: 0;
+  }
 }
 
 @media (min-width: map-get($breakpoints, "sm")) {
   form {
     display: none;
+  }
+  .contact-form {
+    padding: 0;
   }
 }
 
@@ -105,8 +103,15 @@ textarea {
   .contact-form a {
   display: none;
  }
-
   form {
     display: block;
   }
+  .contact-form {
+    padding: 0 $base-size 0 $base-size;
+    
+    &:hover {
+      cursor: auto;
+    }
+  }
 }
+

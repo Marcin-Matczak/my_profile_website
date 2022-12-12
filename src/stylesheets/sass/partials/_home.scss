@@ -13,6 +13,7 @@
   a{
     display: flex;
     height: 100%;
+    width: 100%;
   }
 
   .icon-home {
@@ -55,6 +56,12 @@
   cursor: pointer;
   filter: sepia(50%);
   border-radius: 5px;
+}
+
+.box-13 {
+  img {
+    width: 100%;
+  }
 }
 
 .info-board {

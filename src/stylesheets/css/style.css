@@ -500,6 +500,7 @@ h1 {
 .box a {
   display: flex;
   height: 100%;
+  width: 100%;
 }
 .box .icon-home {
   object-fit: contain;
@@ -537,6 +538,10 @@ h1 {
   cursor: pointer;
   filter: sepia(50%);
   border-radius: 5px;
+}
+
+.box-13 img {
+  width: 100%;
 }
 
 .info-board {
@@ -650,13 +655,6 @@ h1 {
   font-family: "Merriweather", serif;
 }
 
-.contact-form {
-  padding: 0 12px 0 12px;
-}
-.contact-form:hover {
-  cursor: auto;
-}
-
 form {
   height: 90%;
   width: 100%;
@@ -746,10 +744,16 @@ textarea {
   form {
     display: none;
   }
+  .contact-form {
+    padding: 0;
+  }
 }
 @media (min-width: 576px) {
   form {
     display: none;
+  }
+  .contact-form {
+    padding: 0;
   }
 }
 @media (min-width: 768px) {
@@ -758,6 +762,12 @@ textarea {
   }
   form {
     display: block;
+  }
+  .contact-form {
+    padding: 0 12px 0 12px;
+  }
+  .contact-form:hover {
+    cursor: auto;
   }
 }
 @media (min-width: 0) {
