@@ -188,10 +188,7 @@ td span {
   margin: 0 10px 0 10px;
 }
 .projects-wrapper img {
-  width: 25%;
-  margin-bottom: 12px;
-  object-fit: cover;
-  border: 1px solid var(--shadow);
+  width: 14%;
 }
 
 .sidebar, .projects-wrapper {
@@ -233,6 +230,35 @@ a {
   transform: translate(-50%, -50%);
 }
 
+.link {
+  color: var(--text);
+  margin-left: 4px;
+  position: relative;
+  bottom: 12px;
+}
+.link:hover .link-border {
+  width: 100%;
+}
+.link:hover {
+  color: grey;
+}
+
+.project i {
+  position: relative;
+  bottom: 12px;
+}
+
+.link-border {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 0;
+  height: 1px;
+  background: var(--text);
+  background: linear-gradient(90deg, transparent, var(--text));
+  transition: width 0.3s;
+}
+
 .project-title {
   margin-bottom: 12px;
 }
@@ -243,6 +269,7 @@ a {
 
 .project-tags {
   display: flex;
+  margin-bottom: 30px;
 }
 .project-tags p {
   margin: 0 10px 0 0;
@@ -347,7 +374,7 @@ a {
     padding: 10px;
   }
   .sidebar {
-    flex: 1.5 0 0;
+    flex: 1.6 0 0;
   }
   .sidebar:first-of-type .heading {
     margin-top: 36px;
@@ -356,6 +383,8 @@ a {
 @media (max-width: 575px) {
   .projects-wrapper {
     margin: 4px 0 4px 0;
+    position: relative;
+    overflow-y: auto;
   }
   .projects-wrapper img {
     width: 30%;
@@ -366,9 +395,25 @@ a {
   }
   .project {
     font-size: 12px;
+    height: 100%;
+    margin: 20px 0 20px 0;
   }
   .project.active {
     width: 85%;
+  }
+  #projects-wrapper::-webkit-scrollbar {
+    width: 8px;
+  }
+  #projects-wrapper::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: transparent;
+    border: 1px solid var(--shadow);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+  #projects-wrapper::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: var(--main);
+    border: 2px solid var(--shadow);
   }
   .sidebar {
     font-size: 12px;
