@@ -2,12 +2,15 @@
   box-sizing: border-box;
 }
 
+html {
+  @include center();
+}
+
 body {
   @include center();
   background-color: var(--bg);
   margin: 0;
   font-family: $font-text;
-  height: 90vh;
 }
 
 main {

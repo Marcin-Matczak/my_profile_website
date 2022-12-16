@@ -537,6 +537,13 @@ a {
   box-sizing: border-box;
 }
 
+html {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 body {
   position: absolute;
   left: 50%;
@@ -545,7 +552,6 @@ body {
   background-color: var(--bg);
   margin: 0;
   font-family: "Merriweather", serif;
-  height: 90vh;
 }
 
 main {
@@ -849,6 +855,9 @@ textarea {
   }
 }
 @media (min-width: 0) {
+  body {
+    max-height: 80vh;
+  }
   main {
     width: 340px;
     height: 653px;
@@ -1004,6 +1013,9 @@ textarea {
   }
 }
 @media (min-width: 768px) {
+  body {
+    max-height: 100vh;
+  }
   main {
     width: 754px;
     height: 752px;

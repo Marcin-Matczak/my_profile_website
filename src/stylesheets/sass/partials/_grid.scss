@@ -1,5 +1,9 @@
 @media (min-width: map-get($breakpoints, "xs")) {
 
+  body {
+    max-height: 80vh;
+  }
+
   main {
     width: 340px;
     height: 653px;
@@ -187,6 +191,10 @@
 }
 
 @media (min-width: map-get($breakpoints, "md")) {
+
+  body {
+    max-height: 100vh;
+  }
 
   main {
     width: 754px;
