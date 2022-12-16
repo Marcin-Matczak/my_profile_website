@@ -320,8 +320,8 @@ const setAnimation = function(){
     TagsListSelector: '.tags.list',
     AuthorsListSelector: '.authors',
     CloudClassCount: 5,
-    CloudClassPrefix: 'tag-size-',
-  };
+    CloudClassPrefix: 'tag-size-',    
+  };  
 
   const titleClickHandler = function (event) {
     event.preventDefault();
