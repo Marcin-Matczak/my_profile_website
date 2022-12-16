@@ -856,7 +856,7 @@ textarea {
 }
 @media (min-width: 0) {
   body {
-    max-height: 80vh;
+    max-height: 75vh;
   }
   main {
     width: 340px;
