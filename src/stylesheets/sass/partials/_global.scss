@@ -2,16 +2,12 @@
   box-sizing: border-box;
 }
 
-html {
-  height: 100vh;
-}
-
 body {
   @include center();
   background-color: var(--bg);
   margin: 0;
   font-family: $font-text;
-  max-height: 100vh;
+  height: 90vh;
 }
 
 main {
