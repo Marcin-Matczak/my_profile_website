@@ -31,6 +31,10 @@
     box-shadow: 0px 0px 15px 5px var(--shadow);
     cursor: pointer;  
   }
+
+  img {
+    width: 100%;
+  }
 }
 
 .box-1 {
@@ -56,12 +60,6 @@
   cursor: pointer;
   filter: sepia(50%);
   border-radius: 5px;
-}
-
-.box-13 {
-  img {
-    width: 100%;
-  }
 }
 
 .info-board {

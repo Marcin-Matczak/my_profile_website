@@ -538,7 +538,7 @@ a {
 }
 
 html {
-  overflow: auto;
+  height: 100vh;
 }
 
 body {
@@ -598,6 +598,9 @@ h1 {
   box-shadow: 0px 0px 15px 5px var(--shadow);
   cursor: pointer;
 }
+.box img {
+  width: 100%;
+}
 
 .box-1 {
   overflow: auto;
@@ -621,10 +624,6 @@ h1 {
   cursor: pointer;
   filter: sepia(50%);
   border-radius: 5px;
-}
-
-.box-13 img {
-  width: 100%;
 }
 
 .info-board {
