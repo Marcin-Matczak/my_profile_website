@@ -11,6 +11,14 @@
     padding: $base-size;
   }
 
+  .copyright {
+    position: absolute;
+    font-weight: 500;
+    font-size: 9px;
+    right: 4px;
+    bottom: 0px;
+  }
+
   .box {
 
     h1 {
@@ -98,6 +106,12 @@
     padding: $base-size * 1.5;
   }
 
+  .copyright {
+    font-size: 10px;
+    right: 7px;
+    bottom: 0px;
+  }
+
   .box {
     font-size: $font-size * 0.9;
 
@@ -182,6 +196,10 @@
   .container {
     @include grid-layout(6, 6, 110px, 8px);
     padding: $base-size * 2;
+  }
+
+  .copyright {
+    font-size: 11px;
   }
 
   .box {
@@ -351,6 +369,10 @@
   .container {
     @include grid-layout(7, 5, 140px, 15px);
     padding: $base-size * 4;
+  }
+
+  .copyright {
+    bottom: 4px;
   }
 
   .box {
