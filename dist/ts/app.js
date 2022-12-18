@@ -411,7 +411,7 @@ const setAnimation = function () {
 const counter = document.getElementById('count');
 updateVisitCount();
 function updateVisitCount() {
-    fetch('https://api.countapi.xyz/update/m-marcin/home/?amount=1')
+    fetch('https://api.countapi.xyz/update/marcinm/6d7979ca-ab60-4ef7-bd3e-1e2e790d4b13/?amount=1')
         .then(res => res.json())
         .then(res => {
         counter.innerHTML = res.value;

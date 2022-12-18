@@ -1853,9 +1853,17 @@ aside p {
 .article h3 i {
   margin-right: 15px;
 }
+.article h3:not(:first-child) {
+  margin-top: 60px;
+}
 
 .informtion {
   margin-top: 20px;
+}
+
+.clause {
+  margin-top: 70px;
+  font-size: 11px;
 }
 
 a:link {
